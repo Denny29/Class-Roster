@@ -1,10 +1,30 @@
 import "./styles.css";
 
 export default function App() {
+  function List(parm1, parm2, parm3) {
+    return (
+      <ul>
+        <li>{parm1}</li>
+        <li>{parm2}</li>
+        <li>{parm3}</li>
+      </ul>
+    );
+  }
+
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+      {List("Denny F.", "Student", "blue")}
+      {List("Jake", "Student", "red")}
     </div>
+  );
+}
+
+function List(parm1, parm2, parm3) {
+  return (
+    <ul>
+      <li>{parm1}</li>
+      <li>{parm2}</li>
+      <li>{parm3}</li>
+    </ul>
   );
 }

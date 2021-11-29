@@ -1,33 +1,30 @@
 import "./styles.css";
 
 export default function App() {
-  let info = [
-    ["Denny", "Student", "Blue"],
-    ["Jake", "Student", "Blue"]
-  ];
-
-  let display = [];
-  // for (let student of info) {
-
-  // display.push(List(student[0], student[1], student[2]));
+  function List(parm1, parm2, parm3) {
+    return (
+      <ul>
+        <li>{parm1}</li>
+        <li>{parm2}</li>
+        <li>{parm3}</li>
+      </ul>
+    );
+  }
 
   return (
     <div className="App">
-      {/* {List("Denny F.", "Student", "blue")}
-      {List("Jake", "Student", "red")} */}
-      {info.map(function (student) {
-        return List(student[0], student[1], student[2]);
-      })}
+      {List("Denny F.", "Student", "blue")}
+      {List("Jake", "Student", "red")}
     </div>
   );
 }
 
-function List(name, status, color) {
+function List(parm1, parm2, parm3) {
   return (
     <ul>
-      <li>{name}</li>
-      <li>{status}</li>
-      <li>{color}</li>
+      <li>{parm1}</li>
+      <li>{parm2}</li>
+      <li>{parm3}</li>
     </ul>
   );
 }
